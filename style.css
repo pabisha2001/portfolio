@@ -230,3 +230,10 @@ section.in-view {
 .skill:hover .description {
   display: block; /* Show description when the skill is hovered */
 }
+
+.project-card p {
+  text-align: left;
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
