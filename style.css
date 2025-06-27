@@ -231,9 +231,95 @@ section.in-view {
   display: block; /* Show description when the skill is hovered */
 }
 
-.project-card p {
+
+
+/* Project Grid Layout */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Project Card Styling */
+.project-card {
+  flex: 1 1 30%; /* 3 per row */
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+/* Image Style */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
+
+#certifications {
+  padding: 40px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+#certifications h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   text-align: left;
-  margin: 5px 0;
-  font-size: 14px;
-  line-height: 1.5;
+  transition: transform 0.2s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.cert-card a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.cert-card.completed {
+  border-left: 5px solid #10b981; /* Green */
+}
+
+.cert-card.ongoing {
+  border-left: 5px solid #f59e0b; /* Orange */
 }
